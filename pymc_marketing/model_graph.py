@@ -145,6 +145,7 @@ def deterministics_to_flat(model: pm.Model, names: list[str]) -> pm.Model:
             new_rv,
             new_rv.type(name=model_var.name),
             None,
+            model_var.name,
             *dims,
         )
 
